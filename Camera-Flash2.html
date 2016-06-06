@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html>
+<head></head>
+<Body>
+<p><center><button>Say Cheese!</button></center></p>
+
+<div class="face">
+  <div class="lens"></div>
+  <div id ="shine"></div>
+  <div id="btns"></div>
+  <div class="line"></div>
+  <div class="glare"></div>
+</div>
+<div id="wrapper">
+		<div id="header"></div>
+		<div id="content"></div>
+		<div id="footer">Chantal A. (c) 2016</div>
+	</div>
+	
+	<style>
+	html {
+  background: #d9ba71;
+}
+.face {
+  position:fixed;
+    padding: 100px 200px 100px;
+    margin-left: 150px;
+    border-left: 25px solid #693536;
+  border-top: 25px solid #854047;
+  border-radius: 4%;
+  background-color: #b84657;
+    
+}
+.lens{
+    position: fixed;
+     padding: 65px 60px 40px;
+    border: 15px double #403f3e;
+    border-radius: 50%;
+    margin: -40px -60px;
+  background-color: #1a2029;
+}
+#shine {
+  position:fixed;
+     padding: 20px 40px 20px;
+  border-radius: 10%;
+    margin: -90px 100px 70px;
+  background-color: yellow;
+}
+#btns {
+  position: fixed;
+     padding: 4px 20px 10px;
+  border: 9px dotted #4a4848;
+   border-bottom: 9px dotted #2e2c2c;
+  border-radius: 20%;
+  background-color: #383434;
+    margin: -140px -175px ;
+}
+.glare {
+  position: fixed;
+  padding: 2px 12px 20px;
+  background: #5d7d85;
+  margin-left: 30px;
+  border-radius: 50%;
+}
+#footer {
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:60px;
+   text-align: center;
+   background: #b89d5e;
+}
+	</style>
+	<script>
+	//JS animation goes here **In progress
+var changeBg = function (event) {
+    console.log("method called");
+    var me = event.target
+    , shine = document.getElementById("shine")
+    shine.style.backgroundColor = "white";
+    me.setAttribute("disabled", "disabled");
+	var meToo = event.target
+	, btns = document.getElementById("btns")
+	btns.style.margin= "-130px -175px";
+	btns.style.padding="2px 20px 5px";
+
+    setTimeout(function () { clearDemo(me) }, 2000);
+}
+
+function clearDemo(button) {
+    var shine = document.getElementById("shine");
+    shine.style.backgroundColor = "yellow";
+	var btns = document.getElementById("btns");
+	btns.style.margin= "-140px -175px";
+	btns.style.padding="4px 20px 10px";
+    button.removeAttribute("disabled");
+}
+
+var button = document.querySelector("button"); 
+button.addEventListener("click", changeBg); 
+console.log(button);
+	</script>
+	
+	
+	
+	</body>
+	</html>
