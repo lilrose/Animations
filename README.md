@@ -1,2 +1,2 @@
 # Animations
-Animations using HTML, Javascipt and CSS
+Animations using HTML, Javascript and CSS
